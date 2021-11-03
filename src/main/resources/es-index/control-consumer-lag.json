@@ -1,0 +1,49 @@
+{
+  "mappings": {
+    "properties": {
+      "@timestamp": {
+        "type": "date",
+        "index": true
+      },
+      "topic": {
+        "type": "keyword",
+        "index": true,
+        "norms": false
+      },
+      "total-consumer-lag": {
+        "type": "long",
+        "index": true,
+        "norms": false
+      },
+      "consumer-group": {
+        "type": "keyword",
+        "index": true,
+        "norms": false
+      },
+      "partitions" : {
+        "properties" : {
+          "partition" : {
+            "type" : "long",
+            "index": true,
+            "norms": false
+          },
+          "consumer_lag" : {
+            "type" : "long",
+            "index": true,
+            "norms": false
+          },
+          "current_offset" : {
+            "type" : "long",
+            "index": true,
+            "norms": false
+          },
+          "end_offset" : {
+            "type" : "long",
+            "index": true,
+            "norms": false
+          }
+        }
+      }
+    }
+  }
+}
